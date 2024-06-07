@@ -1,5 +1,3 @@
-Certainly! Here is the complete `README.md` file that you can copy and paste:
-
 ```markdown
 # ADG-QPP: Robust Query Performance Prediction for Dense Retrievers via Adaptive Disturbance Generation
 
