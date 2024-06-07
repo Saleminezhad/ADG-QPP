@@ -81,18 +81,4 @@ The outputs of the model will be stored in the `correlations` folder, where you 
 
 ```
 
-## requirements.txt
 
-```txt
-faiss-gpu==1.7.2
-numpy==1.26.3
-pandas==2.1.4
-scikit-learn==1.3.0
-scipy==1.11.4
-torch==2.1.2
-transformers==4.32.1
-sentence-transformers==2.2.2
-rbo==0.1.3
-```
-
-Simply copy and paste the above content into your respective `README.md` and `requirements.txt` files.
