@@ -1,4 +1,4 @@
-```markdown
+
 # ADG-QPP: Robust Query Performance Prediction for Dense Retrievers via Adaptive Disturbance Generation
 
 This repository contains the implementation of ADG-QPP, a Query Performance Prediction (QPP) method designed specifically for dense neural retrievers. The underlying foundation of ADG-QPP is to measure query performance based on its degree of robustness towards perturbations.
