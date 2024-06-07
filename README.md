@@ -54,8 +54,8 @@ tar -xvf msmarco-data/collection.tar.gz -C msmarco-data/
 We need to build two indices using the MS MARCO datasets. One index is for `collection.tsv` for the dense retriever to retrieve documents, and the other is for `queries.train.tsv` to find the nearest queries. Put the indices in `/msmarco-data/indices`.
 
 ```bash
-python build_indices.py --collection_path msmarco-data/collection.tsv --output_dir msmarco-data/indices --index_type document
-python build_indices.py --collection_path msmarco-data/queries.train.tsv --output_dir msmarco-data/indices --index_type query
+python build_indices.py 
+python build_indices.py 
 ```
 
 ## Finding Nearest Queries
@@ -63,7 +63,7 @@ python build_indices.py --collection_path msmarco-data/queries.train.tsv --outpu
 Use the `find_topK_nearest_query.py` script to find and generate the nearest queries file in the `NNQ/output` folder.
 
 ```bash
-python find_topK_nearest_query.py --query_index msmarco-data/indices/query_index --output_dir NNQ/output
+python find_topK_nearest_query.py 
 ```
 
 ## Running the Model
@@ -71,7 +71,7 @@ python find_topK_nearest_query.py --query_index msmarco-data/indices/query_index
 After generating the nearest queries file, use `query_main.py` to run the complete model. The outputs will be stored in the `correlations` folder.
 
 ```bash
-python query_main.py --query_file NNQ/output/nearest_queries.tsv --output_dir correlations
+python query_main.py 
 ```
 
 ## Results
