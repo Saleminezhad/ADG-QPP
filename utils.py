@@ -169,6 +169,7 @@ def retrieve_noisy_doc_v2(NNQ_doc_path, noisy_run_path, main_query_path, index, 
             queries.append(query)
 
 
+
     xq = model.encode(queries)
     top_k = 1000
     
