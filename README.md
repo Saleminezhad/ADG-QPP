@@ -79,6 +79,3 @@ python query_main.py --query_file NNQ/output/nearest_queries.tsv --output_dir co
 The outputs of the model will be stored in the `correlations` folder, where you can find the results of the query performance prediction in terms of various correlation metrics.
 
 
-```
-
-
