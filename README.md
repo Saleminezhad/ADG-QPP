@@ -78,24 +78,7 @@ python query_main.py --query_file NNQ/output/nearest_queries.tsv --output_dir co
 
 The outputs of the model will be stored in the `correlations` folder, where you can find the results of the query performance prediction in terms of various correlation metrics.
 
-## References
 
-If you use this code in your research, please cite our paper:
-
-```
-@article{saleminezhad2024adgqpp,
-  title={Robust Query Performance Prediction for Dense Retrievers via Adaptive Disturbance Generation},
-  author={Abbas Saleminezhad, Negar Arabzadeh, Radin Hamidi Rad, Soosan Beheshti, Ebrahim Bagheri},
-  journal={Journal of Machine Learning},
-  year={2024},
-}
-```
-
-For more details, refer to our [paper](link-to-paper).
-
-## Contact
-
-For any questions or issues, please contact the corresponding author: abbas.saleminezhad@torontomu.ca
 ```
 
 ## requirements.txt
