@@ -14,7 +14,7 @@ def correlation_eval_all_run(performance_path, total_run, year,var, K, epsilon, 
     noisy_dic = {}
     for n in range(total_run):
         # RBO_output_path = f'/home/abbas/Dense-QPP/NNQ/temp_test_query/{metric_name}_{network_size}_{epsilon}_{alpha}_{var}_{version_name}/{n}_{year}_{alpha}_{var}_{version_name}_rbo_noisy_run_fil_{K}'
-        RBO_output_path = f'/home/abbas/ADG-QPP/RBO/{metric_name}_{network_size}_{epsilon}_{var}/{n}_{year}_{var}_rbo_noisy_run_fil_{K}'
+        RBO_output_path = f'/RBO/{metric_name}_{network_size}_{epsilon}_{var}/{n}_{year}_{var}_rbo_noisy_run_fil_{K}'
 
         noisy_run=open(RBO_output_path,'r').readlines()
         
@@ -47,7 +47,7 @@ def correlation_eval_doc_all_run(performance_path, total_run, year,var, K, epsil
     
     noisy_dic = {}
     for n in range(total_run):
-        RBO_output_path = f'/home/abbas/ADG-QPP/RBO/{metric_name}_{network_size}_{epsilon}_{var}/{n}_{year}_{var}_rbo_noisy_run_fil_{K}'
+        RBO_output_path = f'/RBO/{metric_name}_{network_size}_{epsilon}_{var}/{n}_{year}_{var}_rbo_noisy_run_fil_{K}'
 
         noisy_run=open(RBO_output_path,'r').readlines()
         
@@ -99,7 +99,7 @@ def retrieve_noisy_query_network_v1_emb(NNQ_data_emd_similarity, noisy_run_path,
             queries.append(query)
             
 # ############
-    main_query_emb_path = f'/home/abbas/ADG-QPP/msmarco-data/trec_data/{year}/{year}_queries_emb.npy'
+    main_query_emb_path = f'/msmarco-data/trec_data/{year}/{year}_queries_emb.npy'
     xq = np.load(main_query_emb_path)
 
 
