@@ -15,7 +15,7 @@ model_name = 'all-MiniLM-L6-v2'
 bi_encoder = SentenceTransformer(model_name)
 bi_encoder.max_seq_length = 350     #Truncate long passages to 256 tokens
 
-collection_filepath = '/home/abbas/collections/msmarco-passage/collection.tsv'
+collection_filepath = '/collections/msmarco-passage/collection.tsv'
 passages=[]
 
 with open(collection_filepath, 'r', encoding='utf8') as fIn:
@@ -31,11 +31,11 @@ print("Passages:", len(passages))
 # for x in [0,1,2,3,4,5,6,7]:
 #     corpus_embeddings = bi_encoder.encode(passages[x*1000000:(x+1)*1000000], convert_to_tensor=True, show_progress_bar=True,batch_size=128)
 #     torch.save(
-#         corpus_embeddings, f'/home/abbas/collections/faiss_index/corpus_tensor_{str(x + 1)}.pt'
+#         corpus_embeddings, f'/collections/faiss_index/corpus_tensor_{str(x + 1)}.pt'
 #     )
 
 # corpus_embeddings = bi_encoder.encode(passages[8000000:], convert_to_tensor=True, show_progress_bar=True,batch_size=128)
-# torch.save(corpus_embeddings, '/home/abbas/collections/faiss_index/corpus_tensor_9.pt')
+# torch.save(corpus_embeddings, '/collections/faiss_index/corpus_tensor_9.pt')
 
 
 # d = 768
@@ -55,5 +55,5 @@ for i in range(1,10):
     print(i)
 
 print(index.ntotal)
-faiss.write_index(index, f'/home/abbas/collections/faiss_index/faiss_index_{model_name}')
+faiss.write_index(index, f'/collections/faiss_index/faiss_index_{model_name}')
 # os.system('python retrieve.py') 
