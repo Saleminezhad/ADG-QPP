@@ -55,7 +55,6 @@ We need to build two indices using the MS MARCO datasets. One index is for `coll
 
 ```bash
 python build_indices.py 
-python build_indices.py 
 ```
 
 ## Finding Nearest Queries
