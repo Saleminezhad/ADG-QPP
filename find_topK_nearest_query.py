@@ -7,8 +7,8 @@ import json
 
 device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
-base_queries_filepath = "/home/abbas/ADG-QPP/msmarco-data/queries.train.tsv"
-output_path = "/home/abbas/ADG-QPP/NNQ/output"
+base_queries_filepath = "/msmarco-data/queries.train.tsv"
+output_path = "/NNQ/output"
 
 
 top_k = 100 + 1
@@ -33,12 +33,12 @@ print("Number of Queries to be indexed:", len(queries_list))
 
 index = faiss.IndexFlatIP(embedding_dimension_size)
 
-index= faiss.read_index("/home/abbas/ADG-QPP/msmarco-data/indices/train_all-MiniLM-L6-v2_queries.index")
+index= faiss.read_index("/msmarco-data/indices/train_all-MiniLM-L6-v2_queries.index")
 print("index loaded")
 
 
 for year in ["hard", "2019", "2020"]:
-    target_queries_filepath = f"/home/abbas/ADG-QPP/msmarco-data/trec_data/{year}/{year}_queries"
+    target_queries_filepath = f"/msmarco-data/trec_data/{year}/{year}_queries"
     target_queries_name = target_queries_filepath.split('/')[-1]
 
     target_queries = {}
@@ -115,5 +115,5 @@ for year in ["hard", "2019", "2020"]:
                     NNQ_data_emd_similarity[key][rank]["emb"] = embedding_2.tolist()
                     
                     
-    with open(f"/home/abbas/ADG-QPP/NNQ/output/top_100_emb_sim_train_{year}_queries_{model_name}_matched_queries.json", 'w') as json_file:
+    with open(f"/NNQ/output/top_100_emb_sim_train_{year}_queries_{model_name}_matched_queries.json", 'w') as json_file:
         json.dump(NNQ_data_emd_similarity, json_file)
